@@ -11,7 +11,7 @@ const atcoder = '../..assets/atcoder';
   providedIn: 'root'
 })
 export class ContestService {
-  private apiUrl = 'http://localhost:5000/api/contests';
+  private apiUrl = 'https://server-s28m.onrender.com/api/contests';
   data:any;
   private contestIcons = new Map<string, string>([
     ["codeforces.com", "../../assets/Codeforces.png"],
