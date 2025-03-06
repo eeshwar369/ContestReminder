@@ -19,7 +19,7 @@ export class SubscribeComponent {
   }
 
   subscribe() {
-    this.http.post('http://localhost:5000/api/auth/subscribe', { email: this.email }).subscribe(
+    this.http.post('https://server-s28m.onrender.com/api/auth/subscribe', { email: this.email }).subscribe(
       (response: any) => {
         alert('Subscription successful!')
         this.toastr.success("Subscription successful!")
