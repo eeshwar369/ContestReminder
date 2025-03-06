@@ -1,0 +1,46 @@
+.subscribe-btn {
+    background: linear-gradient(135deg, #ff6b6b, #ff4757); /* Gradient color */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .subscribe-btn:hover {
+    background: linear-gradient(135deg, #ff4757, #e84118);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 71, 87, 0.4);
+  }
+  
+  .subscribe-btn:active {
+    transform: scale(0.95);
+  }
+  
+  .subscribe-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+  }
+  
+  .subscribe-btn:focus::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  

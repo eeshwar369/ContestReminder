@@ -4,6 +4,8 @@ const cors = require('cors');
 const {contestNotifier,start}=require('./jobs/contestNotifier')
 
 const app = express();
+
+
 app.use(express.json());
 app.use(cors());
 

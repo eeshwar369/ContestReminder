@@ -1,0 +1,9 @@
+<button class="subscribe-btn" (click)="confirmSubscription()">Subscribe</button>
+
+<div *ngIf="showForm">
+  <h3>Enter your email</h3>
+  <input type="email" [(ngModel)]="email" placeholder="Enter email" required />
+  <button (click)="subscribe()">Continue</button>
+</div>
+
+<p *ngIf="successMessage">{{ successMessage }}</p>
