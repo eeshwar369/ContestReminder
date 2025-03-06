@@ -123,6 +123,7 @@ const checkAndNotifySubscribers = async () => {
     console.log("📨 Subscribed Users:", subscribers);
 
     const contests = await fetchContests();
+    // console.log(contests);
 
     if (!contests.length) {
       console.log("🚫 No contests available for notification.");
@@ -130,7 +131,7 @@ const checkAndNotifySubscribers = async () => {
     }
 
     const now = moment();
-    // console.log(contests);
+    console.log(contests);
 
     for (const contest of contests) {
     
@@ -145,7 +146,7 @@ const checkAndNotifySubscribers = async () => {
       //   }
       // }
       for (const user of subscribers) {
-        await sendEmailNotification(user.email, contest.event);
+        await sendEmailNotification(user.email, contest.event,contest.href);
       }
     }
   } catch (error) {

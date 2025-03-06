@@ -1,11 +1,12 @@
 const transporter = require("../config/emailConfig");
 
-exports.sendEmailNotification = async (email, contestName) => {
+exports.sendEmailNotification = async (email, contestName,contestLink) => {
   const mailOptions = {
     from: process.env.EMAIL_USER,
     to: email,
     subject: `Reminder: ${contestName} starts in 30 minutes!`,
-    text: `Hey! Don't forget, "${contestName}" starts in 30 minutes! Good luck!`,
+    text: `Hey! Don't forget, "${contestName}" starts in 30 minutes! Register Fast and Give Your best . Good luck! 
+    Contest: "${contestLink}"`,
   };
 
   try {
